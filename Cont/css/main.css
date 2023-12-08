@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', helvetica;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.barra {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    box-shadow: black 0 0 4px;
+    z-index: auto;
+}
+
+.barra > p {
+    text-align: left;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-right: auto;
+    z-index: 1;
+    font-size: large;
+}
+
+.barra label{
+    display: flex;
+}
+
+.barra label p{
+    margin: auto 5px;
+    font-size: large;
+}
+
+.barra img {
+    width: 50px;
+    padding: 0 10px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.des {
+    align-items: center;
+    position: fixed;
+    background: red;
+    padding: 50px;
+    height: 100%;
+    box-shadow: black 0 0 4px;
+	/*display: grid;*/
+    right: -100%;
+    top: 0;
+	transition: 1s right;
+    display: flex;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked ~ .des {
+    right: 0;
+}
+
+.des .open {
+    cursor: pointer;
+}
+
+.des .check{
+    display: none;
+}
+
+.register2{
+    display: none;
+    transition: 0.8 display;
+}
+
+.check:checked ~ .register2{
+    display: block;
+}
+
+.login{
+    display: block;
+    transition: 0.8 display;
+}
+
+.check:checked ~ .login{
+    display: none;
+}
+
+form{
+    padding: auto;
+    margin: auto;
+}
+
+form h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    text-align: left;
+    color: #fff;
+}
+
+.inputbox select {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-align: left;
+    color: #fff;
+    outline: 0;
+    display: block;
+    cursor: pointer;
+}
+
+option{
+    text-align: left;
+    padding: 0 35px 0 5px;
+    background-color: white;
+    color: black;
+}
+
+option:hover{
+    color: black;
+    background-color: white;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    top: 20px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255, 1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.register {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p{
+    display: inline-flex;
+}
+
+.register p label {
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s text-decoration;
+    text-decoration: transparent;
+    margin-left: 4px;
+}
+
+.register p label:hover {
+    text-decoration: underline;
+}
+
+.start {
+    display: flex;
+    width: 100%;
+    /*align-items: center;*/
+    margin-top: 50px;
+}
+
+.start > img {
+    width: 50%;
+    /*height: max-content;*/
+}
+
+.start > .h1 {
+    width: 50%;
+    background: linear-gradient(-90deg, transparent, white);
+    font-size: 250%;
+    color: white;
+    padding: 0 4%;
+    align-items: center;
+    display: flex;
+}
+
+.start > .h1 > h1 {
+    text-align: right;
+    margin: auto 0;
+}
+
+.menu {
+    margin-top: 50px;
+    font-size: 200%;
+}
+
+.galery {
+    padding: 5%;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 5%;
+    display: inline-block;
+}
+
+.img > img {
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out 0.1s, 0.5s box-shadow;
+    overflow: hidden;
+    box-shadow: 0 0 0;
+}
+
+.img > img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px;
+}
+
+.img > p {
+    text-align: left;
+    margin: 0 10px;
+    font-size: large;
+}
+
+.mas {
+    width: 200px;
+    height: 200px;
+    margin: 20px 5%;
+    display: inline-block;
+}
+
+.mas > img {
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out 0.1s, 0.5s box-shadow;
+    overflow: hidden;
+    box-shadow: 0 0 0;
+    cursor: pointer;
+}
+
+.mas form{
+    width: 200px;
+    font-size: large;
+    padding: 5px 0;
+}
+
+.mas form div{
+    display: flex;
+    width: 200px;
+    padding: 0 20px;
+}
+
+.mas input{
+    width: 100%;
+    font-size: large;
+    border-radius: 8px;
+}
+
+.orden{
+    display: inline-flex;
+    font-size: larger;
+}
+
+.orden a {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: auto 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.orden a:hover {
+    text-decoration: underline;
+}
+
+.orden img {
+    width: 30px;
+    margin: 20px 5px;
+}
+
+.buttom {
+    border-top: 1px solid white;
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttom a{
+    font-size: larger;
+}
+
+.buttom div{
+    width: max-content;
+    margin: 0 auto;
+    max-width: 30%;
+    text-align: center;
+}
+
+.buttom .note{
+    width: 400px;
+    text-align: center;
+    display: flex;
+    padding: auto;
+    margin: 0 auto;
+}
+
+.buttom .note p{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.red{
+    text-align: center;
+    margin: auto;
+}
+
+.ho{
+    font-weight: bold;
+    font-size: 150%;
+    min-width: max-content;
+    text-align: center;
+    text-align: center;
+    margin: auto;
+}
+
+.red a {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+}
+
+.red a:hover {
+    text-decoration: underline;
+}
+
+.red img {
+    width: 30px;
+    margin: 20px 5px;
+}
+
+.ur{
+    margin: 0 auto;
+}
+
+.ur p{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.ur a{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    text-decoration: none;
+    color: white;
+    margin: 20px auto;
+}
+
+.buttom .ur a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    .start {
+        display: block;
+        background-color: white;
+    }
+
+    .start > .h1 {
+        background: linear-gradient(0deg, black, transparent);
+        width: auto;
+        font-size: 150%;
+        text-align: center;
+        padding: 15% 10%;
+    }
+
+    .start > .h1 > h1 {
+        text-align: center;
+    }
+
+    .start > img {
+        width: 70%;
+        margin-bottom: -5px;
+    }
+
+    .buttom div{
+        min-width: 50%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .des {
+        left: 0;
+        top: -100%;
+        width: 100%;
+        transition: 0.8s top;
+        box-shadow: inset black 0 0 4px;
+        transition: 0.8s top;
+    }
+
+    .checkbox:checked ~ .des {
+        top: 0;
+    }
+
+    .buttom{
+        display: block;
+        text-align: left;
+    }
+
+    .ur a{
+        margin: auto 100%;
+        display: flex;
+        text-align: center;
+    }
+
+    .buttom div{
+        min-width: 90%;
+    }
+
+    .ur a{
+        margin: 20px auto;
+    }
+}
